@@ -332,3 +332,8 @@ extern int mode;
 extern int nested_mode;
 
 #endif
+
+/**
+ * execute command
+ */
+int exec(int argc, char *argv[]);

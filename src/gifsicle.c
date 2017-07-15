@@ -1333,11 +1333,11 @@ copy_crop(Gt_Crop *oc)
 
 
 /*****
- * main
+ * change main to exec on android platform
  **/
 
 int
-main(int argc, char *argv[])
+exec(int argc, char *argv[])
 {
   /* Check SIZEOF constants (useful for Windows). If these assertions fail,
      you've used the wrong Makefile. You should've used Makefile.w32 for
