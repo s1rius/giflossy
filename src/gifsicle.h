@@ -336,4 +336,4 @@ extern int nested_mode;
 /**
  * execute command
  */
-int exec(int argc, char *argv[]);
+int gifsicle_exec(int argc, char *argv[]);

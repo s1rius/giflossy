@@ -19,7 +19,11 @@
 #define HAVE_EXT_VECTOR_TYPE_VECTOR_TYPES 1
 
 /* Define to 1 if the system has the type `int64_t'. */
-#define HAVE_INT64_T 1
+#ifdef __aarch64__
+    #define HAVE_INT64_T 1
+#else
+    #define HAVE_INT64_T 0
+#endif
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
@@ -43,7 +47,7 @@
 /* #undef HAVE_STDLIB_H */
 
 /* Define to 1 if you have the `strerror' function. */
-#define HAVE_STRERROR 1
+#define HAVE_STRERROR 0
 
 /* Define to 1 if you have the <strings.h> header file. */
 /* #undef HAVE_STRINGS_H */
@@ -70,13 +74,18 @@
 /* #undef HAVE_TIME_H */
 
 /* Define to 1 if the system has the type `uint64_t'. */
-#define HAVE_UINT64_T 1
+#ifdef __aarch64__
+    #define HAVE_UINT64_T 1
+#else
+    #define HAVE_UINT64_T 0
+#endif
+
 
 /* Define to 1 if the system has the type `uintptr_t'. */
 #define HAVE_UINTPTR_T 1
 
 /* Define to 1 if you have the <unistd.h> header file. */
-#define HAVE_UNISTD_H 1
+#define HAVE_UNISTD_H 0
 
 /* Define if you have u_intXX_t types but not uintXX_t types. */
 /* #undef HAVE_U_INT_TYPES */

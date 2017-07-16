@@ -25,6 +25,12 @@
 #define static_assert(x, msg) switch ((int) (x)) case 0: case !!((int) (x)):
 #endif
 
+/** uncomment for android debug
+#include <android/log.h>
+#define LOGTAG "gifsicle"
+#define printf(...) __android_log_print(ANDROID_LOG_DEBUG, LOGTAG, __VA_ARGS__)
+*/
+
 Gt_Frame def_frame;
 
 Gt_Frameset *frames = 0;
@@ -1333,11 +1339,11 @@ copy_crop(Gt_Crop *oc)
 
 
 /*****
- * change main to exec on android platform
+ * change main to gifsicle_exec on android platform
  **/
 
 int
-exec(int argc, char *argv[])
+gifsicle_exec(int argc, char *argv[])
 {
   /* Check SIZEOF constants (useful for Windows). If these assertions fail,
      you've used the wrong Makefile. You should've used Makefile.w32 for
